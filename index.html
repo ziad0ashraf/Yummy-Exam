@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="icon" href="imgs/logo.png">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/all.min.css.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body class="overflow-x-hidden">
+
+    <aside class="h-100 position-fixed d-flex text-white z-3">
+        <section id="movingAside" class="d-flex flex-column bg-black justify-content-between py-2">
+            <ul>
+                <li id="search">Search</li>
+                <li id="categories">Categories</li>
+                <li id="area">Area</li>
+                <li id="ingredients">Ingredients</li>
+                <li id="contact">Contact Us</li>
+            </ul>
+            <footer class="p-2">
+                <div><a href="" class="fa-brands fa-facebook"></a> <a href="" class="fa-brands fa-twitter"></a> <a href="" class="fa-solid fa-globe"></a></div>
+                <div>Copyright Â© 2019 All RightsReserved.</div>
+            </footer>    
+        </section>
+        <div id="btnAside" class="d-flex justify-content-between align-items-center flex-column bg-white text-black z-3">
+            <img src="imgs/logo.png" class="" alt="">
+            <i id="closeBtn" class="fa-solid open-close-icon fa-2x fa-x d-none"></i>
+            <i id="openBtn" class="fa-solid open-close-icon fa-2x fa-align-justify"></i>
+            <div class="d-flex flex-column">
+                <i class="fa-solid fa-globe text-black"></i>
+                <i class="fa-solid fa-share-nodes"></i>    
+            </div>
+        </div>
+    </aside>
+    
+    <main>
+
+        <load class="load position-fixed w-100 h-100 d-flex justify-content-center z-3 align-items-center m-0">
+            <span class="loader"></span>
+        </load>
+
+        <sectionHome>
+            <div class="container">
+                <div id="demo1" class="row"></div>
+            </div>
+        </sectionHome>
+        <sectionDetails>
+            <div class="container">
+                <div class="text-end text-white"><i class="closeDetails fa-solid open-close-icon fa-2x fa-x"></i></div>
+                <div id="demoDetails" class="row text-white py-3"></div>    
+            </div>
+        </sectionDetails>
+
+        <sectionSearch class="d-none">
+            <div class="container">
+                <div class="d-flex">
+                    <input id="searchName" type="search" class="form-control mx-2" placeholder="Search by name">
+                    <input id="searchLetter" type="search" class="form-control" placeholder="search by first Letter">
+                </div>
+                <div id="demoSearchByName" class="row"></div>
+            </div>
+        </sectionSearch>
+        
+        <sectionCategory class="d-none">
+            <div class="container">
+                <div id="demoCategory" class="row"></div>
+                <div id="demoFilterCategory" class="row"></div>
+            </div>
+        </sectionCategory>
+
+        <sectionArea class="d-none">
+            <div class="container">
+                <div id="demoArea" class="row text-white"></div>
+                <div id="demoFilterarea" class="row"></div>
+            </div>
+        </sectionArea>
+
+        <sectionIngredients class="d-none">
+            <div class="container">
+                <div id="demoIngredients" class="row text-white text-center"></div>
+                <div id="demoFilterIngredients" class="row text-center"></div>
+            </div>
+        </sectionIngredients>
+
+        <sectionContacts class="d-flex align-items-center justify-content-center d-none vh-100">
+            <div class="container text-center">
+                <div class="row gx-5 gy-5">
+                    <div class="col-lg-6 col-md-12">
+                        <input id="nameInput" type="text" class="form-control" placeholder="Enter Your Name">
+                        <div class="alertName alert alert-danger p-2 m-2 d-none">Minimum 4 characters and number & Special characters and numbers not allowed</div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <input id="emailInput" type="email" class="form-control" placeholder="Enter Your E-mail">
+                        <div class="alertEmail alert alert-danger p-2 m-2 d-none">Email not valid *exemple@yyy.zzz</div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <input id="phoneInput" type="number" class="form-control" placeholder="Enter Your Phone">
+                        <div class="alertPhone alert alert-danger p-2 m-2 d-none">Enter valid Egyptian Phone Number</div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <input id="ageInput" type="number" class="form-control" placeholder="Enter Your Age">
+                        <div class="alertAge alert alert-danger p-2 m-2 d-none">The lowest age is "14"</div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <input id="passwordInput" type="password" class="form-control" placeholder="Enter Your Password">
+                        <div class="alertPass alert alert-danger p-2 m-2 d-none">Enter valid password *Minimum eight characters, at least one letter and one number:*</div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <input id="rePasswordInput" type="password" class="form-control" placeholder="Enter Your Re-Password">
+                        <div class="alertRePass alert alert-danger p-2 m-2 d-none">Enter valid repassword</div>
+                    </div>    
+                </div>
+                <button id="btnSubmit" class="btn btn-outline-danger my-2 disabled">Submit</button>
+            </div>
+        </sectionContacts>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script type="module" src="./js/main.js" ></script>
+</body>
+</html>
