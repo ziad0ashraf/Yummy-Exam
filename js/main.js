@@ -58,10 +58,10 @@ function validEmail(){
 function validPhone(){
     if(regexPhone.test(phoneInput.value)){
         phoneInput.classList.replace('is-invalid', 'is-valid')
-        $('.phoneInput').addClass('d-none')
+        $('.alertPhone').addClass('d-none')
         return true
     }else{
-        $('.phoneInput').removeClass('d-none')
+        $('.alertPhone').removeClass('d-none')
         phoneInput.classList.add('is-invalid')
         phoneInput.classList.remove('is-valid')
         return false
@@ -122,6 +122,7 @@ document.getElementById('searchLetter').addEventListener('input', function() {
 $('.closeDetails').on('click',()=>{
     $('sectionDetails').addClass('d-none')
     $('sectionHome').removeClass('d-none')
+    $('aside ul li').css({color:'gold'}).siblings().css({color:'white'})
 })
 
 
@@ -153,6 +154,11 @@ $('#openBtn').on('click',()=>{
 
 $('aside ul li').on('click',function(){
     $(this).css({color:'gold'}).siblings().css({color:'white'})
+    $('main').animate({marginLeft:0})
+    $('#movingAside').animate({marginLeft :-widthAside},()=>{
+        $('#closeBtn').addClass('d-none')
+        $('#openBtn').removeClass('d-none')
+    })
 })
 
 

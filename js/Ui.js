@@ -32,7 +32,7 @@ export class ui{
            <div id="${data[i].idMeal}" class="cardSearch position-relative overflow-hidden rounded-2">
            <img id="${data[i].idMeal}" class="w-100" src="${data[i].strMealThumb}" alt="">
            <div id="${data[i].idMeal}" class="layer position-absolute d-flex align-items-center">
-                       <h2>${data[i].strMeal}</h2>
+                       <h2 id="${data[i].idMeal}">${data[i].strMeal}</h2>
                    </div>
                </div>
            </div>
@@ -171,8 +171,8 @@ export class ui{
         cartona+=`
                             <div class="card-Ing col-lg-3 col-md-6">
                         <i id="${data[i].strIngredient}" class="fa-solid fa-drumstick-bite fa-4x"></i>
-                        <h3>${data[i].strIngredient}</h3>
-                        <p>${data[i].strDescription.split(" ").slice(0,20).join(" ")}</p>
+                        <h3  id="${data[i].strIngredient}">${data[i].strIngredient}</h3>
+                        <p id="${data[i].strIngredient}">${data[i].strDescription.split(" ").slice(0,20).join(" ")}</p>
                     </div>
 
         `
@@ -188,7 +188,7 @@ export class ui{
                         <div id="${data[i].idMeal}" class="filterIng position-relative overflow-hidden rounded-2">
                         <img id="${data[i].idMeal}" class="w-100" src="${data[i].strMealThumb}" alt="">
                         <div id="${data[i].idMeal}" class="layer position-absolute text-center d-flex align-items-center">
-                                    <h2>${data[i].strMeal}</h2>
+                                    <h2 id="${data[i].idMeal}">${data[i].strMeal}</h2>
                                 </div>
                             </div>
                     </div>

@@ -85,6 +85,7 @@ export class apis {
         let response=await data.json()
         // console.log(response);
         this.ui.displaySearch(response.meals.slice(0, 20))
+        this.getIdSearch()
         document.querySelector('.load').classList.add('d-none')
     }
     
